@@ -22,6 +22,7 @@
     header{
         position: sticky;
         top:0%;
+        z-index: 1;
     }
 
     body{
@@ -55,13 +56,13 @@
 
     .hidden{
         opacity: 0;
-        transition-duration:1.5s;
-        
+        transition-duration:1.25s;
+        transform: translateY(-20%);
     }
 
     .show{
         opacity: 1;
-        
+        transform: translateY(0%);
     }
 
     nav ul{
@@ -105,19 +106,34 @@
 
 
 
-    .firstSection{
+    .homeSection{
         display: flex;
         justify-content: space-around;
+        flex-wrap: wrap;
         align-items: center;
         margin: 130px 0px;
     }
 
-    .firstSection > div{
+    .homeSection > div{
         width: 30%;
     }
 
     .leftSection{
         font-size: 2.0rem;
+    }
+
+    .leftSection .buttons{
+        margin-top: 20px;
+    }
+
+    .leftSection .btn{
+        padding: 12px;
+        background-color: #1e2167;
+        color: white;
+        border: 2px solid white;
+        border-radius: 6px;
+        font-size: 15px;
+        cursor: pointer;
     }
 
     .rightSection img{
@@ -151,6 +167,7 @@
     }
 
     .about-details div{
+        margin-left: 20px;
         margin-bottom: 10px;
     }
 
@@ -171,6 +188,64 @@
 
     .about-details div a:hover{
         color: #9c97f1;
+    }
+
+    .skillSection{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+    }
+
+    .skillSection .skill-caption{
+        color: gray;
+    }
+
+    .skill-main{
+        
+        width: 80%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+
+    .skill-main .skill{
+        box-shadow:2px 2px 4px  #9c97f1;
+        
+        color: white;
+        margin-top: 20px;
+        border-radius: 10px;
+        width:260px;
+        height: 100px;
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+    }
+
+   
+
+    .projectSection{
+       
+        display: flex;
+        flex-direction: column;
+        align-items:center;
+    }
+
+    .projectSection div{
+        width: 80%;
+        box-shadow: 2px 2px 5px #9c97f1;
+        border-radius: 10px;
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+        transition-duration: 0.8s;
+    }
+
+    .projectSection div:hover{
+        transform: scale(1.025);
     }
 
     footer{
@@ -204,6 +279,7 @@
     .footer span a:active{
         color: none;
     }
+
     .footer-second{
         margin-top: 15px;
         margin-bottom: 15px;
@@ -229,11 +305,16 @@
     </header>
 
     <main>
-        <section class="firstSection hidden" id="Home">
+        <section class="homeSection hidden" id="Home">
             <div class="leftSection hidden">
                 Hi, I am <span class="myName hidden">Ajith Kumar</span>
                 <div>and I am a passionate</div>
                 <span id="element"></span>
+
+                <div class="buttons">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
             </div>
             <div class="rightSection hidden">
                 <img src="https://www.hypemax.com/site-img/banner/software-development.png" alt="Error!">
@@ -257,13 +338,51 @@
                     <i class="fa-solid fa-envelope"></i><span>124003020@sastra.ac.in</span>
                 </div>
                 <div class="linkedin hidden">
-                    <a href="https://www.linkedin.com/in/ajith-kumar-2b327727a/">    <i class="fa-brands fa-linkedin"></i><span> Link to Linkedin</span> </a>
+                    <a href="https://www.linkedin.com/in/ajith-kumar-2b327727a/">    <i class="fa-brands fa-linkedin"></i><span> Visit Linkedin</span> </a>
                 </div>
                 <div class="github hidden">
-                    <a href="https://github.com/Ajith-47"> <i class="fa-brands fa-github"></i><span> Link to Github</span></a>
+                    <a href="https://github.com/Ajith-47"> <i class="fa-brands fa-github"></i><span> Visit Github</span></a>
                 </div>        
             </div>
 
+        </section>
+
+        <hr>
+
+        <section class="skillSection hidden" id="Skills">
+            <h2 class="hidden">Skills</h2>
+            <span class="skill-caption hidden">What I have learnt so far</span>
+            <div class="skill-main hidden">
+                <div class="skill hidden">
+                    C++ Programming
+                </div>
+
+                <div class="skill hidden">
+                    SQL Programming
+                </div>
+
+                <div class="skill hidden">
+                    Data Structures and Algorithms
+                </div>
+
+                <div class="skill hidden">
+                    Object Oriented Programming
+                </div>
+
+                <div class="skill hidden">
+                    Operating System
+                </div>
+
+                <div class="skill hidden">
+                    Full Stack Web Developement
+                </div>
+
+                <div class="skill hidden">
+                    Git and Github
+                </div>
+
+
+            </div>
         </section>
 
         <hr>
@@ -276,21 +395,21 @@
         <hr>        
 
 
-        <section class="aboutSection hidden" id="Projects">
+        <section class="projectSection hidden" id="Projects">
             <h2>Projects</h2>
             <div class="todolist hidden">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+                I am a final year student, pursuing B. Tech Computer Science and Engineering offered by SASTRA School of Computing.  
+                I am looking for an opportunity to work as a full time employee.
             </div>
 
             <div class="blog hidden">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
+                I am a final year student, pursuing B. Tech Computer Science and Engineering offered by SASTRA School of Computing.  
+                I am looking for an opportunity to work as a full time employee.
             </div>
 
             <div class="whatsapp hidden">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                
+                I am a final year student, pursuing B. Tech Computer Science and Engineering offered by SASTRA School of Computing.  
+                I am looking for an opportunity to work as a full time employee.   
             </div>
         </section>
 
